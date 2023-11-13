@@ -10,7 +10,9 @@ const publicaciones = [
 export const DetallePublicacion = () => {
   const { id } = useParams();
   const publicacion = publicaciones.find((p) => p.id === parseInt(id, 10));
-
+  if (!publicacion) {
+    return <div>Publicación no encontrada</div>;
+  }
   return (
     <div>
       <h2>Detalles de la Publicación</h2>

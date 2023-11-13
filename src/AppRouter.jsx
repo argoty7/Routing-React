@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import { ListaDePublicaciones } from "./components/ListaDePublicaciones";
 import { Navbar } from "./components/Navbar.jsx";
 import './App.css';
+import { DetallePublicacion } from "./components/DetallePublicacion";
 
 
 export const AppRouter = () => {
@@ -15,11 +16,11 @@ export const AppRouter = () => {
         <Routes>
             
             <Route path="/" element={<Home />} />
-            
-            
+                        
             <Route path="/publicaciones" element={ <ListaDePublicaciones />} />
-            
-            
+
+            <Route path="/detalle/:id" element={<DetallePublicacion />} />
+                        
 
         </Routes>
       </div>
